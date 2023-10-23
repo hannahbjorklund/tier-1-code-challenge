@@ -39,12 +39,16 @@ console.table(myScrabbleTiles);
 
 // 6. Complete this function. It needs to be given an array of tile objects. The function will use a for-loop to add up and return the sum of all the scores for a given array of scrabble tiles.
 function calculateScore(tiles) {
-
+  let tileSum = 0;
+  for(let tile of tiles){
+    tileSum += tile.score;
+  }
+  return tileSum;
 }
 
-
 // 7. Use the function above to get the total score for myScrabbleTiles and assign the value to a variable called "myScore".
-
+let myScore = calculateScore(myScrabbleTiles);
+console.log("Sum of all tiles:", myScore);
 
 // 8. Check whether or not your score is higher than the highScore. If your score is higher, change highScore to the new high score.
 
