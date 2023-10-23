@@ -51,7 +51,10 @@ let myScore = calculateScore(myScrabbleTiles);
 console.log("Sum of all tiles:", myScore);
 
 // 8. Check whether or not your score is higher than the highScore. If your score is higher, change highScore to the new high score.
-
+if(myScore > highScore){
+  highScore = myScore;
+}
+console.log("New high score?", highScore);
 
 // DONE!
 
